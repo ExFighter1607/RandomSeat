@@ -1,7 +1,7 @@
 /*
 *   Copyright (c) 2021 ExFighter. 
 *   文件名: rdcore.h
-*   文件内容: RandomSeat的抽号算法头文件
+*   文件内容: RandomSeat的抽号算法定义
 */
 
 #ifndef _RDST_CORE_H_
@@ -36,8 +36,8 @@ struct _Seats {
 *   参数: 
       [struct _Seats* seats]待初始化的座位表
       [int pernum]人数
-*   返回值: int整型, 0表示成功, -1表示失败 */
-int initSeat(struct _Seats seats, int pernum);
+*   返回值: int整型, 0表示成功, -1表示失败, -2表示人数已尽 */
+int initSeat(struct _Seats* seats, int pernum);
 
 /*
 *   函数: rmSeat
@@ -46,9 +46,9 @@ int initSeat(struct _Seats seats, int pernum);
       [struct _Seats* seats]待处理的座位表
       [int seatRm]待移除座位号
 *   返回值: int整型, 正数表示剩余座位数, -1表示失败 */
-int rmSeat(struct _Seats seats, int seatRm);
+int rmSeat(struct _Seats* seats, int seatRm);
 
-
+//未完待续...
 
 
 #endif
