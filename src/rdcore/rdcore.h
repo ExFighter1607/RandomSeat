@@ -1,7 +1,7 @@
 /*
 *   Copyright (c) 2021 ExFighter. 
 *   文件名: rdcore.h
-*   文件内容: RandomSeat的抽号算法定义
+*   文件内容: RandomSeat的抽号算法头文件
 */
 
 #ifndef _RDST_CORE_H_
