@@ -19,16 +19,21 @@
 * 结构体: Seats [座位表]
 */
 struct _Seats {
-    int     seatnum;
-    int*    seatList;
+    int     seatnum;   //人数
+    int*    list;      //座位表
 }
 
 /*
-*   宏:交换两个变量x,y, 以mid为中介 */
+*   宏:交换两个变量x,y, 以mid为中介 
 #define Swap(x,y,mid)   \
     mid=x;              \
     x=y;                \
     y=mid;
+*/
+
+/*宏:将数组numList的第src个元素移动到第target个元素*/
+#define Move(numList, src, target) \
+(*(numList+target))=(*(numList+src))
 
 /*
 *   函数: initSeat
@@ -46,7 +51,7 @@ int initSeat(struct _Seats* seats, int pernum);
       [struct _Seats* seats]待处理的座位表
       [int seatRm]待移除座位号
 *   返回值: int整型, 正数表示剩余座位数, -1表示失败 */
-int rmSeat(struct _Seats* seats, int seatRm);
+int rmSeat(struct _Seats* seats, int order);
 
 //未完待续...
 
